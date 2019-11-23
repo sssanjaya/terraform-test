@@ -1,1 +1,1 @@
-# terraform
+We will create 2 subnets (one for public access and another private). We have Elastic Load Balancer in the public subnet to handle the traffic to our web servers. Our web servers will be on the private subnet and it will only be accessible through the Load Balancer. This mean that we won’t have direct access to make connections (for example, SSH) on the server. In order to access via SSH an instance on a private subnet, you’ll need a bastion host and connect to the web server through it. Thus, we will create the bastion host on the public subnet.
